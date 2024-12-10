@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:15
+    container_name: grind_169_container
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: lc_study
+    ports:
+      - '5433:5432'
+    volumes:
+      - db-data:/var/lib/postgresql/data
+volumes:
+  db-data:
